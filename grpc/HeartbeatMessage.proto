@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option go_package = "galaxy/grpc";
+
+message HeartbeatResponse {
+  enum Status {
+    UNKNOWN = 0;
+    UP = 1;
+    DOWN = 2;
+  }
+  Status status = 1;
+}

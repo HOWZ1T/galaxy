@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option go_package = "galaxy/grpc";
+
+import "google/protobuf/empty.proto";
+import "grpc/HeartbeatMessage.proto";
+
+service NodeService {
+  rpc Heartbeat(google.protobuf.Empty) returns (HeartbeatResponse) {}
+}
